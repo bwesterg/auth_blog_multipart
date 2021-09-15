@@ -1,9 +1,33 @@
+body {
+  background-color: rgb(255, 254, 248);
+}
+
+.App {
+  text-align: center;
+}
+
+.bicycle-form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 250px;
+  margin: auto;
+  justify-content: space-evenly;
+  background-color: rgb(189, 243, 247);
+  box-shadow: 10px 20px 20px -10px rgb(67, 109, 3);
+  padding: 20px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
 .bicycle-list {
   display: flex;
   flex-flow: row wrap;
   list-style-type: none;
   justify-content: space-between;
-  width: 90%
+  width: 90%;
+  margin: 0 auto;
+  padding-inline-start: 0;
 }
 
 .bicycle-item {
