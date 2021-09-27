@@ -4,10 +4,10 @@ const initialState = {
     usage: "",
     frame_material: "",
     manufacturer: "",
-    speeds: ""
+    speeds: "",
 }
 
-export default class BicycleForm extends Component {
+export default class BicycleForm extends Component{
 
     state = initialState
 
@@ -20,12 +20,8 @@ export default class BicycleForm extends Component {
     }
 
     handleSubmit = (event) => {
-        let {submitAction, handleToggle} = this.props
         event.preventDefault()
-        submitAction(this.state)
-        if(handleToggle){
-            handleToggle()
-        }
+        this.props.addBicycle(this.state)
     }
 
     render(){
@@ -36,11 +32,11 @@ export default class BicycleForm extends Component {
                 <label>Usage</label>
                 <input type="text" name="usage" value={usage} onChange={this.handleChange}/>
                 <label>Frame Material</label>
-                <input type="text" name="frame-material" value={frame_material} onChange={this.handleChange}/>
+                <input type="text" name="frame_material" value={frame_material} onChange={this.handleChange}/>
                 <label>Manufacturer</label>
                 <input type="text" name="manufacturer" value={manufacturer} onChange={this.handleChange}/>
                 <label>Speeds</label>
-                <input type="text" name="speeds" value={speeds} />
+                <input type="text" name="speeds" value={speeds} onChange={this.handleChange}/>
                 <input type="submit" />
             </form>
         )
