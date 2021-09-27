@@ -27,6 +27,13 @@ class App extends Component {
     this.setState({
       bicycles: [...this.state.bicycles, newBicycle]
     })
+    fetch(BASEURL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(newBicycle)
+    })
   }
 
   render(){
