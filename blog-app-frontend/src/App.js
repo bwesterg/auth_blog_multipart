@@ -41,6 +41,7 @@ class App extends Component {
     this.setState({
       bicycles: filtered
     })
+    fetch(BASEURL + "/" + id, {method: "DELETE"} )
   }
 
   render(){
