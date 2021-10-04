@@ -36,12 +36,19 @@ class App extends Component {
     })
   }
 
+  deleteBicycle = (id) => {
+    let filtered = this.state.bicycles.filter(bicycle => bicycle.id !== id)
+    this.setState({
+      bicycles: filtered
+    })
+  }
+
   render(){
     return (
       <div className="App">
         <h1>Bicycle App</h1>
         <BicycleForm addBicycle={this.addBicycle} />
-        <BicycleContainer bicycles={this.state.bicycles} />
+        <BicycleContainer deleteBicycle={this.deleteBicycle} bicycles={this.state.bicycles} />
     </div>
     );
   }
