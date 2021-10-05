@@ -11,6 +11,7 @@ export default function BicycleItem({id, usage, frame_material, manufacturer, sp
             <h4>Made by: {manufacturer}</h4>
             <h4>Speeds: {speeds}</h4>
             <button onClick={handleClick} className="delete-button" >DELETE</button>
+            {/* update button should go here for next blog */}
         </li>
     )
 }
